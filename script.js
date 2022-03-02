@@ -2,7 +2,7 @@ let url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/m
 let req = new XMLHttpRequest()
 
 let data
-let values
+let dataset
 
 let heightScale
 let xScale
@@ -23,6 +23,16 @@ let drawCanvas = () => {
 
 let generateScales = () => {
 
+  heightScale = d3.scaleLinear()
+                  .domain([0, d3.max(dataset, (item) => {
+                    return item[1]
+                  })])
+                  .range([0, height - (2 * padding)])
+
+  xScale = d3.scaleLinear()
+             .domain([0, dataset.length - 1])
+             .range([padding, width - padding])
+
 }
 
 let drawBars = () => {
@@ -37,8 +47,8 @@ fetch(url)
   .then(response => response.json())
   .then(data => {
     // console.log(data)
-    values = data.data
-    // console.log(values)
+    dataset = data.data
+    // console.log(dataset)
     drawCanvas()
     generateScales()
     drawBars()
