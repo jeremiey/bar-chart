@@ -29,6 +29,18 @@ let drawBars = () => {
 
 }
 
-let generateAxis = () => {
-  
+let generateAxes = () => {
+
 }
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // console.log(data)
+    values = data.data
+    // console.log(values)
+    drawCanvas()
+    generateScales()
+    drawBars()
+    generateAxes()
+  })
