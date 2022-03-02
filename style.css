@@ -3,8 +3,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #708090;
+  height: 100%;
+  width: 99%;
 }
 
 svg {
-  background-color: wheat;
+  background-color: #fff;
+  box-shadow: 2px 2px 20px;
 }
