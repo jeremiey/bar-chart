@@ -33,6 +33,14 @@ let generateScales = () => {
              .domain([0, dataset.length - 1])
              .range([padding, width - padding])
 
+  let datesArray = dataset.map((item) => {
+    return new Date(item[0])
+  })
+  // console.log(datesArray)
+
+  xAxisScale = d3.scaleTime()
+                 .domain([d3.min(datesArray), d3.max(datesArray)])
+                 .range([padding, width - padding])
 }
 
 let drawBars = () => {
@@ -48,7 +56,7 @@ fetch(url)
   .then(data => {
     // console.log(data)
     dataset = data.data
-    // console.log(dataset)
+    console.log(dataset)
     drawCanvas()
     generateScales()
     drawBars()
