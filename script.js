@@ -41,6 +41,10 @@ let generateScales = () => {
   xAxisScale = d3.scaleTime()
                  .domain([d3.min(datesArray), d3.max(datesArray)])
                  .range([padding, width - padding])
+
+  yAxisScale = d3.scaleLinear()
+                 .domain([0, d3.max(values, (item) => item[1])])
+                 .range([height - padding, padding])
 }
 
 let drawBars = () => {
