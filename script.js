@@ -54,6 +54,12 @@ let drawBars = () => {
      .append('rect')
      .attr('class', 'bar')
      .attr('width', (width = (2 * padding)) / dataset.length)
+     .attr('data-date', (item) => {
+       return item[0]
+     })
+     .attr('data-gdp', (item) => {
+       return item[1]
+     })
 }
 
 let generateAxes = () => {
