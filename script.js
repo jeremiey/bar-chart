@@ -48,7 +48,12 @@ let generateScales = () => {
 }
 
 let drawBars = () => {
-
+  svg.selectAll('rect')
+     .data(dataset)
+     .enter()
+     .append('rect')
+     .attr('class', 'bar')
+     .attr('width', (width = (2 * padding)) / dataset.length)
 }
 
 let generateAxes = () => {
