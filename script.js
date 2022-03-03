@@ -43,7 +43,7 @@ let generateScales = () => {
                  .range([padding, width - padding])
 
   yAxisScale = d3.scaleLinear()
-                 .domain([0, d3.max(values, (item) => item[1])])
+                 .domain([0, d3.max(dataset, (item) => item[1])])
                  .range([height - padding, padding])
 }
 
@@ -52,7 +52,13 @@ let drawBars = () => {
 }
 
 let generateAxes = () => {
+  
+  let xAxis = d3.axisBottom(xAxisScale)
 
+  svg.append('g')
+     .call(xAxis)
+     .attr('id', 'x-axis')
+     .attr('transform', 'translate(0, ' + (height - padding) + ')')
 }
 
 fetch(url)
