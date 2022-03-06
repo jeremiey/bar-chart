@@ -1,6 +1,5 @@
 // Declaring all needed variables
 let url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
-let req = new XMLHttpRequest()
 
 let data
 let dataset
@@ -49,6 +48,9 @@ let generateScales = () => {
 }
 
 let drawBars = () => {
+
+  let tooltip
+
   svg.selectAll('rect')
      .data(dataset)
      .enter()
