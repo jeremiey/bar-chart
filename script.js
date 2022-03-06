@@ -1,3 +1,4 @@
+// Declaring all needed variables
 let url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
 let req = new XMLHttpRequest()
 
@@ -48,14 +49,6 @@ let generateScales = () => {
 }
 
 let drawBars = () => {
-
-  let tooltip = d3.select('body')
-                  .append('div')
-                  .attr('id', 'tooltip')
-                  .style('visibility', 'hidden')
-                  .style('height', 'auto')
-                  .style('width', 'auto')
-
   svg.selectAll('rect')
      .data(dataset)
      .enter()
@@ -76,19 +69,6 @@ let drawBars = () => {
      })
      .attr('y', (item) => {
       return (height - padding) - heightScale(item[1])
-    })
-
-    .on('mouseover', (item) => {
-      tooltip.transition()
-             .style('visibility', 'visible')
-
-      tooltip.text(item[0])
-      document.querySelector('#tooltip').setAttribute('data-date', item[0])
-    })
-
-    .on('mouseout', (item) => {
-      tooltip.transition()
-             .style('visibility', 'hidden')
     })
 }
 
