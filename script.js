@@ -49,8 +49,6 @@ let generateScales = () => {
 
 let drawBars = () => {
 
-  let tooltip
-
   svg.selectAll('rect')
      .data(dataset)
      .enter()
@@ -71,7 +69,7 @@ let drawBars = () => {
      })
      .attr('y', (item) => {
       return (height - padding) - heightScale(item[1])
-    })
+     })
 }
 
 let generateAxes = () => {
