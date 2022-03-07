@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -5,12 +9,33 @@ body {
   align-items: center;
   background-color: #708090;
   height: 100%;
-  width: 99%;
 }
 
 svg {
   background-color: #fff;
   box-shadow: 2px 2px 20px;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.bar {
+  background-color: #2b7a78;
+  border-color: #2b7a78;
+  fill: #2b7a78;
+}
+
+.bar:hover {
+  fill: rgb(0, 0, 0);
+}
+
+.bar:active {
+  fill: rgb(0, 0, 0);
+}
+
+#tooltip {
+  margin-top: 10px;
+  color: #000000;
+  font-size: 28px;
 }
 
 #title {
