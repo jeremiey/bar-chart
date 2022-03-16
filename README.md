@@ -2,7 +2,7 @@
 
 > Live Preview: <https://jeremiey.github.io/bar-chart/>
 
-![image](https://user-images.githubusercontent.com/87664239/156353105-81a8dc45-b080-4369-b077-b8f37d4b9ed3.png)
+![Screenshot from 2022-03-16 11-21-49](https://user-images.githubusercontent.com/87664239/158569017-5d294237-52fa-4ce9-bacf-823130de612a.png)
 
 Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/GrZVaM.
 
