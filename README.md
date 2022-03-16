@@ -1,4 +1,4 @@
-# [freeCodeCamp Visualize Data with Bar Chart](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-bar-chart)
+# [D3 Bar Chart](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-bar-chart)
 
 > Live Preview: <https://jeremiey.github.io/bar-chart/>
 
