@@ -1,6 +1,6 @@
 # [D3 Bar Chart](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-bar-chart)
 
-**Live Preview Link**: <https://jeremiey.github.io/bar-chart/>
+**Live Preview Link**: <https://jeremiey.github.io/fcc-bar-chart/>
 
 **Dataset used to complete this project**: <https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json>
 
